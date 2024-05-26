@@ -46,33 +46,126 @@ cat <<EOL > "$APP_PATH/Contents/Info.plist"
         <string>x86_64</string>
     </array>
     <key>CFBundleDocumentTypes</key>
-    <array>
+<array>
+    <dict>
+        <key>CFBundleTypeName</key>
+        <string>Audio Document</string>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>LSHandlerRank</key>
+        <string>Owner</string>
+        <key>LSItemContentTypes</key>
+        <array>
+            <string>public.audio</string>
+            <string>public.ogg</string>
+            <string>public.flac</string>
+        </array>
+    </dict>
+    <dict>
+        <key>CFBundleTypeName</key>
+        <string>Video Document</string>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>LSHandlerRank</key>
+        <string>Owner</string>
+        <key>LSItemContentTypes</key>
+        <array>
+            <string>public.video</string>
+            <string>public.movie</string>
+            <string>public.mkv</string>
+            <string>public.flv</string>
+            <string>public.webm</string>
+        </array>
+    </dict>
+</array>
+
+<key>UTExportedTypeDeclarations</key>
+<array>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>public.mkv</string>
+        <key>UTTypeDescription</key>
+        <string>MKV Video</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.movie</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
         <dict>
-            <key>CFBundleTypeName</key>
-            <string>Audio Document</string>
-            <key>CFBundleTypeRole</key>
-            <string>Viewer</string>
-            <key>LSHandlerRank</key>
-            <string>Owner</string>
-            <key>LSItemContentTypes</key>
+            <key>public.filename-extension</key>
             <array>
-                <string>public.audio</string>
+                <string>mkv</string>
+            </array>
+            <key>public.mime-type</key>
+            <array>
+                <string>video/x-matroska</string>
             </array>
         </dict>
+    </dict>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>public.ogg</string>
+        <key>UTTypeDescription</key>
+        <string>OGG Audio</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.audio</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
         <dict>
-            <key>CFBundleTypeName</key>
-            <string>Video Document</string>
-            <key>CFBundleTypeRole</key>
-            <string>Viewer</string>
-            <key>LSHandlerRank</key>
-            <string>Owner</string>
-            <key>LSItemContentTypes</key>
+            <key>public.filename-extension</key>
             <array>
-                <string>public.video</string>
-                <string>public.movie</string>
+                <string>ogg</string>
+            </array>
+            <key>public.mime-type</key>
+            <array>
+                <string>audio/ogg</string>
             </array>
         </dict>
-    </array>
+    </dict>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>public.flv</string>
+        <key>UTTypeDescription</key>
+        <string>FLV Video</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.movie</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
+        <dict>
+            <key>public.filename-extension</key>
+            <array>
+                <string>flv</string>
+            </array>
+            <key>public.mime-type</key>
+            <array>
+                <string>video/x-flv</string>
+            </array>
+        </dict>
+    </dict>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>public.webm</string>
+        <key>UTTypeDescription</key>
+        <string>WebM Video</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.movie</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
+        <dict>
+            <key>public.filename-extension</key>
+            <array>
+                <string>webm</string>
+            </array>
+            <key>public.mime-type</key>
+            <array>
+                <string>video/webm</string>
+            </array>
+        </dict>
+    </dict>
+</array>
 </dict>
 </plist>
 EOL
@@ -80,4 +173,3 @@ EOL
 cp "$ICON_PATH" "$APP_PATH/Contents/Resources/mpv.icns"
 
 echo "$APP_NAME has been created and moved to Applications folder."
-
