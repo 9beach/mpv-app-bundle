@@ -11,5 +11,5 @@ cd mpv-app-bundle
 ./install-mpv-bundle.sh
 ```
 
-For Lua scripts and settings for MPV, please visit 
+For [Lua](https://www.lua.org) scripts and settings for mpv, please visit 
 [mpv-config](https://github.com/9beach/mpv-config).
