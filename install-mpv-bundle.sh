@@ -78,7 +78,6 @@ cat <<EOL > "$APP_PATH/Contents/Info.plist"
         </array>
     </dict>
 </array>
-
 <key>UTExportedTypeDeclarations</key>
 <array>
     <dict>
