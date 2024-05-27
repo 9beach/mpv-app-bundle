@@ -1,15 +1,20 @@
 #!/bin/bash
 
+APP_NAME="mpv.app"
+APP_PATH="/Applications/$APP_NAME"
+MPV_PATH="$(which mpv)"
+ICON_PATH="mpv.icns"
+
+if [ "x$MPV_PATH" = "x" ]; then
+	echo "Please install mpv with homebrew and run this script again."
+	exit 1
+fi
+
 if [ -d /Applications/mpv.app ]; then
 	echo "/Applications/mpv.app is already installed."
 	echo "Please remove it and try again."
 	exit 1
 fi
-
-APP_NAME="mpv.app"
-APP_PATH="/Applications/$APP_NAME"
-MPV_PATH="$(which mpv)"
-ICON_PATH="mpv.icns"
 
 if ! [ -f "$ICON_PATH" ]; then
 	echo "Please set ICON_PATH correctly."
