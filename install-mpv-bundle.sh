@@ -27,6 +27,9 @@ mkdir -p "$APP_PATH/Contents/Resources"
 cat <<EOL > "$APP_PATH/Contents/MacOS/mpv-wrapper"
 #!/bin/bash
 
+[ -d /opt/homebrew/bin ] && export PATH="$PATH:/opt/homebrew/bin"
+[ -d /usr/local/bin ] && export PATH="$PATH:/usr/local/bin"
+
 $MPV_PATH --player-operation-mode=pseudo-gui "\$@"
 EOL
 chmod +x "$APP_PATH/Contents/MacOS/mpv-wrapper"
