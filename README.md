@@ -16,6 +16,12 @@ Now, you can install **mpv.app**. Run the following command in the terminal:
 curl -L https://raw.githubusercontent.com/9beach/mpv-app-bundle/main/install-raw.sh | bash
 ```
 
+If you'd like to install mpv.app with a different icon (e.g., alternative-02.icns), you can specify it using the ALT_ICON environment variable. Run this command instead:
+
+```bash
+ALT_ICON=alternative-02.icns curl -L https://raw.githubusercontent.com/9beach/mpv-app-bundle/main/install-raw.sh | bash
+```
+
 After installation, you can find **mpv.app** in the `/Applications` folder and use context menu items to run media files.
 
 ![mpv app bundle](mpv-app-bundle.jpg)
