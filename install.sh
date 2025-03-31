@@ -59,73 +59,41 @@ cat <<EOL > "$APP_PATH/Contents/Info.plist"
     </array>
     <key>CFBundleDocumentTypes</key>
 <array>
-    <dict>
-        <key>UTTypeIdentifier</key>
-        <string>public.m3u-playlist</string>
-        <key>UTTypeDescription</key>
+<dict>
+        <key>CFBundleTypeName</key>
         <string>M3U Playlist</string>
-        <key>UTTypeConformsTo</key>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>LSItemContentTypes</key>
         <array>
-    	<string>public.playlist</string>
-    	<string>public.text</string>
+            <string>public.m3u-playlist</string>
         </array>
-        <key>UTTypeTagSpecification</key>
-        <dict>
-    	<key>public.filename-extension</key>
-    	<array>
-    	    <string>m3u</string>
-    	    <string>m3u8</string>
-    	</array>
-    	<key>public.mime-type</key>
-    	<array>
-    	    <string>audio/x-mpegurl</string>
-    	    <string>application/vnd.apple.mpegurl</string>
-    	</array>
-        </dict>
+        <key>CFBundleTypeIconFile</key>
+        <string>playlist_icon</string>
     </dict>
     <dict>
-        <key>UTTypeIdentifier</key>
-        <string>public.pls-playlist</string>
-        <key>UTTypeDescription</key>
-        <string>PLS Playlist</string>
-        <key>UTTypeConformsTo</key>
-        <array>
-    	<string>public.playlist</string>
-    	<string>public.text</string>
-        </array>
-        <key>UTTypeTagSpecification</key>
-        <dict>
-    	<key>public.filename-extension</key>
-    	<array>
-    	    <string>pls</string>
-    	</array>
-    	<key>public.mime-type</key>
-    	<array>
-    	    <string>audio/x-scpls</string>
-    	</array>
-        </dict>
-    </dict>
-    <dict>
-        <key>UTTypeIdentifier</key>
-        <string>public.xspf-playlist</string>
-        <key>UTTypeDescription</key>
+        <key>CFBundleTypeName</key>
         <string>XSPF Playlist</string>
-        <key>UTTypeConformsTo</key>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>LSItemContentTypes</key>
         <array>
-    	<string>public.playlist</string>
-    	<string>public.xml</string>
+            <string>org.xiph.xspf-playlist</string>
         </array>
-        <key>UTTypeTagSpecification</key>
-        <dict>
-    	<key>public.filename-extension</key>
-    	<array>
-    	    <string>xspf</string>
-    	</array>
-    	<key>public.mime-type</key>
-    	<array>
-    	    <string>application/xspf+xml</string>
-    	</array>
-        </dict>
+        <key>CFBundleTypeIconFile</key>
+        <string>playlist_icon</string>
+    </dict>
+    <dict>
+        <key>CFBundleTypeName</key>
+        <string>PLS Playlist</string>
+        <key>CFBundleTypeRole</key>
+        <string>Viewer</string>
+        <key>LSItemContentTypes</key>
+        <array>
+            <string>public.pls-playlist</string>
+        </array>
+        <key>CFBundleTypeIconFile</key>
+        <string>playlist_icon</string>
     </dict>
     <dict>
 	<key>CFBundleTypeName</key>
