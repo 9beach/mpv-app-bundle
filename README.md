@@ -16,7 +16,7 @@ Now, you can install **mpv.app**. Run the following command in the terminal:
 curl -L https://raw.githubusercontent.com/9beach/mpv-app-bundle/main/install-raw.sh | bash
 ```
 
-If you'd like to install **mpv.app** with a different icon (e.g., alternative-02.icns), you can specify it using the ALT_ICON environment variable. Run this command instead:
+If you'd like to install **mpv.app** with a different icon (e.g., `alternative-02.icns`, `/path-to/your-favorite-icon.icns`), you can specify it using the ALT_ICON environment variable. Run this command instead:
 
 ```bash
 curl -L https://raw.githubusercontent.com/9beach/mpv-app-bundle/main/install-raw.sh | ALT_ICON=alternative-02.icns bash
